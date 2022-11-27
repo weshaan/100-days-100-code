@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	printf("Please eneter a number to know its factors...\n");
+	int no;
+	scanf("%d",&no);
+	int f=1;
+	for(;f<=no;f++)
+	{
+		if(no%f==0)
+		printf("Factor found: %d\n",f);
+	}
+}
