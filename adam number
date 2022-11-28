@@ -1,0 +1,29 @@
+//adman number
+#include<stdio.h>
+//global dec
+int reverser(int a);
+int main()
+{  
+    int number;
+	printf("Please enter a number...\n");
+	scanf("%d",&number);
+	int rev=reverser(number);
+	if(reverser(number*number)==(rev*rev))
+	   printf("%d is an Adam number.\n",number);
+	else
+	   printf("%d is not an Adam number.",number);
+}
+//reverser number
+int reverser(int n)
+{	
+    int d;
+	int num=0;
+	while(n>0)
+	{ 
+	    d=n%10;
+		num=num+d;
+		num=num*10;
+		n=n/10;
+	}
+	return num/10;
+}
