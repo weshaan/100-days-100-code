@@ -1,0 +1,18 @@
+/* WAP to arithmetic operations 
+***********************************/
+
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	printf ("Please enter 2 natural numbers.\n");
+	scanf("%d, %d", &a, &b);
+	printf("***********************************************\n");
+	printf("addition result: %d \n",a+b);
+	printf("subtraction result: %d \n",a-b);
+	printf("multiplication result: %d \n",a*b);
+	printf("division result: %d \n",a/b);
+	printf("***********************************************\n");
+	printf("Thank you for using my program :)");
+	return 0;
+}
