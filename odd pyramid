@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+	int n=1;
+	int i,j;
+	int lim;
+    printf("Pls enter limit to the pyramid...\n");
+    scanf("%d",&lim);
+    int ct= (lim+1)/2;
+	for(i=ct;i>=1;i--)
+	{
+		for(int a=1;a<i;a++)
+		printf(" ");
+		for(j=1;j<=n;j=j+2)
+		{
+			printf("%d ",j);
+			
+		}
+		n=n+2;
+		printf("\n");
+	}
+}
