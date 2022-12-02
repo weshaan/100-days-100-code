@@ -1,0 +1,17 @@
+// lowercase to upper case
+#include<stdio.h>
+int main()
+{
+	char str1[100];
+	int i;
+	printf("enter word in small letters \n");
+	gets(str1);
+	
+	for(i=0;str1[i]!=NULL;i++)
+	{
+		if(str1[i]>='a' && str1[i]<='z')
+		{  str1[i]= str1[i]-32;
+		}
+	}
+	printf("in uppercase: %s", str1);
+}
