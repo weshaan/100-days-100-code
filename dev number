@@ -1,0 +1,55 @@
+// dev number
+
+#include<stdio.h>
+
+
+int dev(int no);
+int power(int aa, int bb);
+int main()
+{
+	printf("***Dev numbers between 1 to 1000....***\n");
+	int number;
+	
+	for(long int a=1;a<=1000;a++)
+	   {
+	   	number=dev(a);
+	   	if(number==a)
+	   	  printf("%d \n",number);
+		   
+	   }
+	
+	printf("***thank you...***\n") ;  
+}
+
+int power(int a, int b)
+{
+	int bf=1;
+	int res=1;
+	for(bf;bf<=b;bf++)
+	   {res=res*a;}
+	   return res;
+}
+
+int dev(int n)
+{
+	int dg;
+	int ch;
+	int ans=0;
+	int d=0;
+	int num=n;
+	for(;n>0;n/=10)
+	{
+		d++;
+	}
+	int digit;
+	for(ch=1;ch<=d;d--)
+	{
+		dg= num%10;
+		digit= power(dg,d);
+		ans=ans+digit;
+		num=num/10;
+		
+		
+	}
+	return ans;
+}
