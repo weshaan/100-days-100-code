@@ -1,0 +1,56 @@
+#include<stdio.h>
+int prime(int n)
+{
+	int no=n;
+	n=n-1;
+	int d=0;
+	for(;n>1;n--)
+	{
+		if(no%n==0)
+		d++;
+	}
+	return d;
+}
+int armstrong(int n)
+{
+	int ar=0;
+	int b;
+	int no=n;
+	int d=0;
+	while(no>0)
+	{
+		d++;
+		no=no/10;
+	}
+	
+	no=n;
+	while(no>0)
+	{
+		b=no/10;
+		ar=ar+b*d;
+		no=no/10;
+	}
+	if(ar==n)
+	return 1;
+	else
+	return 0;
+	
+}
+int main()
+{
+	printf("Enter a number...\n");
+	int num;
+	scanf("%d",&num);
+	int aa= prime(num);
+	int bb= armstrong(num);
+	if(aa)
+	printf("Not Prime\n");
+	else
+	printf("Prime\n");
+	
+	if(bb)
+	printf("armstrong\n");
+	else
+	printf("not armstrong\n");
+	
+}
