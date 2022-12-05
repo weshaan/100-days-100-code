@@ -1,0 +1,19 @@
+/* WAP to reverse integer using while loop
+***********************************/
+
+#include <stdio.h>
+int main()
+{
+   int a,no;
+   printf("***Please enter a number to recieve reversed output***\n");
+   scanf("%d", &no);
+   printf("******************************************************\n");
+   int d, rev=0;
+   while (no>0)
+   {
+   	d=no%10;
+   	no=no/10;
+   	rev= rev*10+d;
+   }
+   printf("reversed output: %d", rev);
+}
