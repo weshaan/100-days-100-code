@@ -1,0 +1,22 @@
+//wap to print 1 to 10 using recurrion but variable should be defined inside the fuction.
+#include<stdio.h>
+int printer();
+
+int main()
+{
+	printer();
+}
+int printer()
+{
+	 int n=1;
+	  ss:
+    printf("%d",n);
+    if(n==10)
+     return 0;
+     n++;
+     if(n>1)
+     goto ss;
+    printer();
+}
+
+
