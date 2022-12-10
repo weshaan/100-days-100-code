@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+
+int main(void) {
+  srand(time(0));
+  printf("extracting data...\n");
+  while(1)
+    {int no=rand();
+	if(no%2==1)
+	printf("1");
+	else 
+	printf("0");}
+}
