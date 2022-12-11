@@ -1,0 +1,46 @@
+/* using character depth and dencity to create a waves like illusion..
+**********************************/
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+char format[]="N@#W$9876543210?!abc;:/=-,._ ";
+int size=sizeof(format);
+int line_number=1;
+void printer();
+
+int main()
+{	
+    printer();
+}
+
+void printer()
+{
+	char waves[58];
+	
+	for(int n=1;;n++)
+	{
+		for(int a=0;a<58;a++)
+		if(n%2==1)
+		{   if(a>=29)
+	  	    waves[a]=format[a-29]; 
+	  	    else
+    	    waves[a]=format[a];
+	    }
+	    else
+	    {	if(a>=29)
+	  	    waves[a]=format[57-a]; 
+	  	    else
+    	    waves[a]=format[28-a];
+		}
+		for(int delay=0;delay<=12345;delay++)
+		for(int delay2=0;delay2<=425;delay2++){}
+	    puts(waves);
+	    char end=format[0];
+	    for(int b=0;b<28;b++)
+	       format[b]=format[b+1];
+	       format[28]=end;
+	       
+
+	}
+}
