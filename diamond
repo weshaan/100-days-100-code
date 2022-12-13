@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+	int b=1;
+	int i,j;
+	printf("Enter a number...");
+	int num;
+	scanf("%d",&num);
+	for(i=num;i>=1;i--)
+	{
+		for(int a=1;a<i;a++)
+		 printf("  ");
+		for(j=num;j>=i;j--)
+		{
+			printf("%d ",num+1-j);
+		}
+		
+		for(j=1;j<b&&i<num;j++)
+		{
+			printf("%d ",b-j);
+		}
+		b++;
+		printf("\n");
+	}
+	
+	for(i=1;i<num;i++)
+	{
+		for(int a=1;a<=i;a++)
+		 printf("  ");
+		for(j=i;j<num;j++)
+		{
+			printf("%d ",j-i+1);
+		}
+		
+		for(j=2;j<num+1-i;j++)
+		{
+			printf("%d ",num-i-j+1);
+		}
+		b++;
+		printf("\n");
+	}
+}
