@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+// Function declaration
+void swap(int *x, int *y);
+
+int main()
+{
+    int a = 5, b = 10;
+
+    // Before swapping
+    printf("Before swapping: a = %d, b = %d\n", a, b);
+
+    // Call the function swap by passing the addresses of a and b
+    swap(&a, &b);
+
+    // After swapping
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+// Function definition
+void swap(int *x, int *y)
+{
+    // Swap the values by using a temporary variable
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
