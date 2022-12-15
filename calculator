@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main()
+{
+	float result;
+	int a,b;
+	char op;
+	printf("enter operator\n");
+	scanf("%c", &op);
+	printf("enter 2 numbers.\n");
+	scanf("%d",&a);
+	scanf("%d",&b);
+	switch(op)
+	{
+		case '+':
+			result=a+b;
+			break;
+		case '-':
+			result=a-b;
+			break;
+		case '*':
+			result=a*b;
+			break;
+		case '/':
+			result=a/b;
+			break;
+		default: printf("error");
+	}
+	printf("result is:%f",result);
+}
