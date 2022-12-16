@@ -1,0 +1,100 @@
+/* i love you, but it got way cooler...
+author- Eshaan Walia
+date- 29th nov, 2022
+***************************************************************/
+#include<stdio.h>      
+#include<stdlib.h>     //for terminal cleaner
+#include<time.h>       
+#include<string.h>     
+
+char ch(int);
+int i,j=1;
+int no=0,num;
+int ans;
+/* main begins. basically make a random number, use it to print a random alphabet in a particular
+element of array, then replace value in the element of array with letter of desired word one by one after a 
+preset time. clean terminal every time for a word building illusion.
+****************************************************/
+int main() 
+{
+	printf("Are you the one?\n");
+	printf("Yess!			(enter 1)\nNot yet...		(enter 2)\n");
+	scanf("%d",&ans);
+	system("cls");
+	
+	if(ans==1)
+	{ 
+	printf("You always were...because\n");
+	} else if(ans==2){
+		printf("Do you want me to make you the one?\n");
+	}else {
+	  printf("bruh you dont deserve love lmao\n");
+		return 0;
+	}
+	if(ans==2)
+	{
+		printf("idk  		(enter 1)\nNo.		(enter 2)\n");
+		scanf("%d",&ans);
+		system("cls");
+		switch(ans)
+		{
+			case 1: printf("Well you dont have an option because"); break;
+			case 2: printf("You have no idea what wonders you missed... well as you wish, see ya"); return 0; break;
+		   default : printf("bruh you dont deserve love lmao\n"); return 0;
+		}
+	}
+	
+	for(int delay=1;delay<12345;delay++)
+	for(int delay2=1;delay2<100000;delay2++){}
+    srand(time(0));
+	char c[8];
+	for(int f=0;f<8;f++)
+	c[f]='a';
+	
+    for(i=0;i<8;i++)
+    {
+    	j=1;
+	    while(j<7)
+	    {
+	    	no=rand();
+	    	num=no%100;
+		    if(num<25)
+		    { 
+		        for(int delay=1;delay<12345;delay++)
+				for(int delay2=1;delay2<300;delay2++){}
+		        system("cls");   //clear terminal
+		    	c[i]=c[i]+num;
+		    	for(int d=0;d<i;d++)
+	    	    printf("%c",c[d]);
+		    	printf("%c\n",c[i]);
+		    	c[i]='a';
+			} else{
+				continue;
+			} j++;
+	    }
+	    c[i]=ch(i);
+    }
+    system("cls");
+    printf("I \3 You");
+    
+	for(int delay=1;delay<12345;delay++)
+	for(int delay2=1;delay2<105055;delay2++){}
+	
+	printf(" BEHEN xD") ;
+}
+
+char ch(int a)    // gives value of desired letters to main function.
+{
+	switch(a)
+	{
+		case 0: return 'I';  break;
+		case 1: return ' ';  break;
+		case 2: return '<';  break;
+		case 3: return '3';  break;
+		case 4: return ' ';  break;
+		case 5: return 'Y';  break;
+		case 6: return 'o';  break;
+		case 7: return 'u';  break;
+
+	}
+}
