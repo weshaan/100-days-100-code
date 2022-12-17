@@ -1,0 +1,226 @@
+// character identifier
+
+#include<stdio.h>
+#include<string.h>
+
+int character(char ch);
+int main()
+{
+	printf("Please enter your word...\n");
+	char word[100];
+	gets(word);
+    int a;
+    int siz=sizeof(word);
+    
+    for(a=0;;a++)
+    {
+    	
+		if((a!=0)&&(a!=1)&&(a!=2)&&(a!=3)&&(a!=4)&&(a!=5)&&(a!=6)&&(a!=7)&&(a!=8)&&(a!=9))
+		if(a%8==0)
+    	{
+    		if(word[a]==9);
+    		{a++;
+			continue;
+		}}
+    	character (word[a]);
+    	
+    	if(a==siz)
+    	{break;
+		}
+	}
+}
+
+int character(char a)
+{
+	switch(a)
+	{
+		case 'A' :
+			printf("A is a vowel\n");
+		break;
+		case 'B' :
+			printf("B is a consonants\n");
+		break;
+		case 'C' :
+			printf("C is a consonants\n");
+		break;
+		case 'D' :
+			printf("D is a consonants\n");
+		break;
+		case 'E' :
+			printf("E is a vowel\n");
+		break;
+		case 'F' :
+			printf("F is a consonants\n");
+		break;
+		case 'G' :
+			printf("G is a consonants\n");
+		break;
+		case 'H' :
+			printf("H is a consonants\n");
+		break;
+		case 'I' :
+			printf("I is a vowel\n");
+		break;
+		case 'J' :
+			printf("J is a consonants\n");
+		break;
+		case 'K' :
+			printf("K is a consonants\n");
+		break;
+		case 'L' :
+			printf("L is a consonants\n");
+		break;
+		case 'M' :
+			printf("M is a consonants\n");
+		break;
+		case 'N' :
+			printf("N is a consonants\n");
+		break;
+		case 'O' :
+			printf("O is a vowel\n");
+		break;
+		case 'P' :
+			printf("P is a consonants\n");
+		break;
+		case 'Q' :
+			printf("Q is a consonants\n");
+		break;
+		case 'R' :
+			printf("R is a consonants\n");
+		break;
+		case 'S' :
+			printf("S is a consonants\n");
+		break;
+		case 'T' :
+			printf("T is a consonants\n");
+		break;
+		case 'U' :
+			printf("U is a vowel\n");
+		break;
+		case 'V' :
+			printf("V is a consonants\n");
+		break;
+		case 'W' :
+			printf("W is a consonants\n");
+		break;
+		case 'X' :
+			printf("X is a consonants\n");
+		break;
+		case 'Y' :
+			printf("Y is a consonants\n");
+		break;
+		case 'Z' :
+			printf("Z is a consonants\n");
+		break;
+        case 'a' :
+			printf("a is a vowel\n");
+		break;
+		case 'b' :
+			printf("b is a consonants\n");
+		break;
+		case 'c' :
+			printf("c is a consonants\n");
+		break;
+		case 'd' :
+			printf("d is a consonants\n");
+		break;
+		case 'e' :
+			printf("e is a vowel\n");
+		break;
+		case 'f' :
+			printf("f is a consonants\n");
+		break;
+		case 'g' :
+			printf("g is a consonants\n");
+		break;
+		case 'h' :
+			printf("h is a consonants\n");
+		break;
+		case 'i' :
+			printf("i is a vowel\n");
+		break;
+		case 'j' :
+			printf("j is a consonants\n");
+		break;
+		case 'k' :
+			printf("k is a consonants\n");
+		break;
+		case 'l' :
+			printf("l is a consonants\n");
+		break;
+		case 'm' :
+			printf("m is a consonants\n");
+		break;
+		case 'n' :
+			printf("n is a consonants\n");
+		break;
+		case 'o' :
+			printf("o is a vowel\n");
+		break;
+		case 'p' :
+			printf("p is a consonants\n");
+		break;
+		case 'q' :
+			printf("q is a consonants\n");
+		break;
+		case 'r' :
+			printf("r is a consonants\n");
+		break;
+		case 's' :
+			printf("s is a consonants\n");
+		break;
+		case 't' :
+			printf("t is a consonants\n");
+		break;
+		case 'u' :
+			printf("u is a vowel\n");
+		break;
+		case 'v' :
+			printf("v is a consonants]n");
+		break;
+		case 'w' :
+			printf("w is a consonants\n");
+		break;
+		case 'x' :
+			printf("x is a consonen\n");
+		break;
+		case 'y' :
+			printf("y is a consonen\n");
+		break;
+		case 'z' :
+			printf("z is a consonants\n");
+		break;
+		case '0' :
+			printf("0 is a neither consonants nor a vowel\n");
+		break;
+		case '1' :
+			printf("1 is a neither consonants nor a vowel\n");
+		break;
+		case '2' :
+			printf("2 is a neither consonants nor a vowel\n");
+		break;
+		case '3' :
+			printf("3 is a neither consonants nor a vowel\n");
+		break;
+		case '4' :
+			printf("4 is a neither consonants nor a vowel\n");
+		break;
+		case '5' :
+			printf("5 is a neither consonants nor a vowel\n");
+		break;
+		case '6' :
+			printf("6 is a neither consonants nor a vowel\n");
+		break;
+		case '7' :
+			printf("7 is a neither consonants nor a vowel\n");
+		break;
+		case '8' :
+			printf("8 is a neither consonants nor a vowel\n");
+		break;
+		case '9' :
+			printf("9 is a neither consonants nor a vowel\n");
+		break;
+		default:
+			printf("");	
+	}
+}
