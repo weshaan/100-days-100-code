@@ -1,0 +1,12 @@
+/* WAP ascii for character.
+*******************************/
+
+#include<stdio.h>
+int main()
+{
+	char c;
+	printf("Please enter a character to recieve its ASCII value.");
+	scanf ("%c", &c);
+	printf("Character recieved %c , its ASCII value is: %d",c, c);
+	
+}
