@@ -1,0 +1,14 @@
+#include<stdio.h>
+char message[]="I love you";
+int no=50005;
+int main(){
+	for(int n=0;n<10;n++){
+		printf("%c",message[n]);
+		if(message[n]==' ')
+		no=no/10;
+		if(message[n]=='y')
+		no=no+50000;
+		for(int delay=1;delay<12345;delay++)
+		for(int delay2=1;delay2<no;delay2++){}
+	}printf(" \3");
+}
