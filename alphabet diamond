@@ -1,0 +1,33 @@
+#include<stdio.h>
+// author- eshaan walia
+int main(){
+	int b=1;
+	int i,j;
+	printf("Enter a number...");
+	int num;
+	scanf("%d",&num);
+	for(i=num;i>=1;i--){
+		for(int a=1;a<i;a++)
+		 printf("  ");
+		for(j=num;j>=i;j--){
+			printf("%c ",(num+1-j)%26 +64);
+		}
+		for(j=1;j<b&&i<num;j++){
+			printf("%c ",(b-j)%26 +64);
+		}
+		b++;
+		printf("\n");
+	}
+	for(i=1;i<num;i++){
+		for(int a=1;a<=i;a++)
+		 printf("  ");
+		for(j=i;j<num;j++){
+			printf("%c ",(j-i+1)%26 +64);
+		}
+		for(j=2;j<num+1-i;j++){
+			printf("%c ",(num-i-j+1)%26 +64);
+		}
+		b++;
+		printf("\n");
+	}
+}
