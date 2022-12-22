@@ -1,0 +1,98 @@
+/* electronics logic gates.
+author- Eshaan Walia
+date-	20 Dec, 2022
+******************************************************************/
+#include<stdio.h>
+
+int and_g(int a[],int n);
+int or_g(int a[],int n);
+int not_g(int a);
+int xor_g(int a[],int n);
+void output(int aa[],int nn,int lt);
+int result=NULL;
+
+int main(){
+	printf("Please enter number of inputs...");
+	int num;
+	scanf("%d",&num);
+	int inputs[num];
+	printf("Please select gate type(enter number):\n1.AND\n2.OR\n3.NOT\n4.NAND\n5.NOR\n6.XOR\n");
+	int gate;
+	scanf("%d",&gate);
+	if(num==0){
+		printf("You had no inputs, just like your life.");
+		return 0;
+	}
+	if((gate==3)&&(num!=1)){
+		printf("Bro thats too many inputs at a time, its a NOT gate, not your girl. ");
+		printf("\nOh wait, you dont have a girl");
+		return 0;
+	}
+	if((gate==0)||(gate>6)){
+		printf("Stop trying to make things work that dont exist, my code has standards.");
+	    return 0;
+	}
+	printf("Enter all inputs(0 or 1) one by one\n");
+	for(int l=0;l<num;l++){
+		printf("Input %d:",l+1);
+		scanf("%d",&inputs[l]);
+		if((inputs[l]!=0)&&(inputs[l]!=1)){
+			printf("Binary states are 0,1. Your iq is 0.");
+			return 0;
+		}
+	}
+	output(inputs,gate,num);
+}
+int and_g(int a[],int n){
+	for(int b=0;b<n;b++){
+		if(a[b]==0)
+		return 0;
+	}return 1;
+}
+int or_g(int a[],int n){
+	for(int b=0;b<n;b++){
+		if(a[b]==1)
+		return 1;
+	}return 0;
+}
+int not_g(int a){
+	if(a==1)
+	return 0;
+	return 1;
+}
+int xor_g(int a[],int n){
+		for(int b=0;b<n;b++){
+		if(a[0]==1)
+		if(a[b]==0){return 1;}
+		if(a[0]==0)
+		if(a[b]==1){return 1;}
+	}return 0;
+}
+void output(int ab[],int nn, int lt){
+	int aa[lt];
+	
+	for(int no=0;no<lt;no++){
+	aa[no]=ab[no];}
+	switch(nn){
+		case 1:	result=and_g(aa,lt);
+				printf("%d",result);
+				break;
+		case 2:	result=or_g(aa,lt);
+				printf("%d",result);
+				break;
+		case 3:	result=not_g(aa[0]);
+				printf("%d",result);
+				break;
+		case 4:	result=and_g(aa,lt);
+				result=not_g(result);
+				printf("%d",result);
+				break;
+		case 5:	result=or_g(aa,lt);
+				result=not_g(result);
+				printf("%d",result);
+				break;
+		case 6:	result=xor_g(aa,lt);
+				printf("%d",result);
+				break; 
+	}
+}
