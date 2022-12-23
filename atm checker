@@ -1,0 +1,30 @@
+//https://www.codechef.com/problems/ATM2
+#include <stdio.h>
+
+int k=0;
+int n=0;
+void checker(int a,int ta);
+
+int main(void) {
+    int t;
+    scanf("%d",&t);
+    for(int lt=1;lt<=t;lt++){
+	scanf("%d",&n);
+	scanf("%d",&k);
+	int a[n];
+	for(int at=0;at<n;at++)
+	    scanf("%d",&a[at]);
+	printf("\n");
+	for(int at=0;at<n;at++)
+	    checker(a[at],k);
+	printf("\n");
+    }return 0;
+}
+void checker(int a,int ta){
+    if(a<=ta){
+        k=k-a;
+        printf("1");
+    }else
+        printf("0");
+}
+
