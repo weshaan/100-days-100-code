@@ -1,0 +1,33 @@
+//https://www.codechef.com/problems/PROGLANG
+#include <stdio.h>
+int lg[2];
+int fs[4];
+int checker(int n);
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+	    scanf("%d",&lg[0]);
+	    scanf("%d",&lg[1]);
+	    for(int a=0;a<4;a++)
+	    scanf("%d",&fs[a]);
+	    int result=checker(1);
+	    printf("%d\n",result);
+	}
+	return 0;
+}
+int checker(int n){
+    if(n>4)
+    return 0;
+    if(n%2==1){
+        if((lg[0]==fs[n-1])||(lg[0]==fs[n]))
+        checker(n+1);
+        else
+        checker(n+2);
+    }else{
+        if((lg[1]==fs[n-1])||(lg[1]==fs[n-2]))
+        return n/2;
+        else
+        return 0;
+    }
+}
