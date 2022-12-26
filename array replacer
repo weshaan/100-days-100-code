@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(){
+	int num=0;
+	printf("Enter number of elements for array...\n");
+	scanf("%d",&num);
+	int array[num];
+	for(int a=0;a<num;a++){
+		printf("Enter elements %d: ",a+1);
+		scanf("%d",&array[a]);
+	}
+	int max=0,min=0;
+	for(int a=0;a<num;a++){
+		if(array[a]>=array[max])
+			max=a;
+		if(array[a]<=array[min])
+			min=a;
+	}
+	printf("%d\n",max);
+	printf("%d\n",min);
+	int t=array[max];
+	array[max]=array[min];
+	array[min]=t;
+	printf("Array after maximum and minimum numbers reversed: \n");
+	for(int a=0;a<num;a++)
+		printf("element %d: %d\n",a+1,array[a]);
+}
