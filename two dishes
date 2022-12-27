@@ -1,0 +1,20 @@
+//https://www.codechef.com/LP1TO201/problems/TWODISH
+#include <stdio.h>
+
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+	    int n,fruit,veggi,fish;
+	    scanf("%d%d%d%d",&n,&fruit,&veggi,&fish);
+	    if(veggi>=n){
+	        if(n<=(fruit+fish))
+	                    printf("YES\n");
+	   else
+	      printf("NO\n");
+	}else
+	    printf("NO\n");
+	}
+	return 0;
+}
+
