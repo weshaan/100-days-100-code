@@ -1,0 +1,23 @@
+//author- Eshaan Walia
+#include<stdio.h>
+int main(){
+	int n;
+	printf("Enter number for pattern\n");
+	scanf("%d",&n);
+	int k = (2*n)-1;
+	int ar[k][k];
+	int num=n;
+	int d=0;
+	while(n){
+	for(int a=num-n;a<k-d;a++)
+	for(int b=num-n;b<k-d;b++)
+		ar[a][b]=n;
+	d++;
+	n--;
+	}
+	for(int i=0;i<k;i++){
+	for(int j=0;j<k;j++)
+	printf("%d ",ar[i][j]);
+	printf("\n");
+	}
+}
