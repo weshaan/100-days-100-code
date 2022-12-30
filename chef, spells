@@ -1,0 +1,19 @@
+#include <stdio.h>
+// https://www.codechef.com/LP1TO201/problems/CHFSPL
+int biggest(int i,int j,int k);
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+	    int a,b,c;
+	    scanf("%d%d%d",&a,&b,&c);
+	    printf("%d\n",biggest(a,b,c));
+	}
+	return 0;
+}
+int biggest(int i,int j,int k){
+    if((i<=j)&&(i<=k))
+        return j+k;
+    else
+        biggest(k,i,j);
+}
