@@ -1,0 +1,20 @@
+//https://www.codechef.com/LP1TO201/problems/TANDJ1/
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+	    int t1,t2,j1,j2,k;
+	    scanf("%d%d%d%d%d",&t1,&t2,&j1,&j2,&k);
+	    int d=(abs(j1-t1))+(abs(j2-t2));
+	    int lol=k-d;
+	    if((lol%2==0)&&(k>=d))
+	    printf("YES\n");
+	    else
+	    printf("NO\n");
+	}
+	return 0;
+}
+
