@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+// Function to perform binary search
+int binarySearch(int array[], int size, int key)
+{
+    // Initialize left and right indices
+    int left = 0, right = size - 1;
+
+    // Perform binary search
+    while (left <= right)
+    {
+        // Calculate middle index
+        int middle = left + (right - left) / 2;
+
+        // If the key is at the middle, return the index
+        if (array[middle] == key)
+            return middle;
+
+        // If the key is smaller than the middle element, search the left half
+        else if (array[middle] > key)
+            right = middle - 1;
+
+        // If the key is larger than the middle element, search the right half
+        else
+            left = middle + 1;
+    }
+
+    // Return -1 if the key is not found
+    return -1;
+}
+
+int main(void)
+{
+    int array[] = { 1, 2, 3, 4, 5 };
+    int size = sizeof(array) / sizeof(array[0]);
+    int key = 4;
+
+    int index = binarySearch(array, size, key);
+
+    if (index != -1)
+        printf("Key found at index %d\n", index);
+    else
+        printf("Key not found\n");
+
+    return 0;
+}
