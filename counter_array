@@ -1,0 +1,25 @@
+//count re-occurence of elements in array
+#include<stdio.h>
+
+int main(){
+	printf("enter number of test cases...\n");
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+		printf("enter total number of elements in array\n");
+		int n;
+		scanf("%d",&n);
+		
+		int arr1[n];
+		static int arr2[100];
+		for(int a=0;a<n;a++){
+			printf("enter element array[%d] :",a);
+			scanf("%d",&arr1[a]);
+			arr2[arr1[a]]++;
+		}
+		
+		for(int a=1;a<100;a++)
+			if(arr2[a]!=0)
+			printf("%d happens %d times\n",a,arr2[a]);
+	}
+}
