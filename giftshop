@@ -1,0 +1,36 @@
+#include <stdio.h>
+//https://www.codechef.com/LP1TO205/problems/GFTSHP?tab=statement
+int cmp(const void * a,const void *b)
+{
+    return (*(int*)a-*(int *)b);
+}
+int main(void) {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--)
+	{
+	    int n,k;
+	    scanf("%d %d",&n,&k);
+	    int a[n],c=0;
+	    for(int i=0;i<n;i++)
+	    scanf("%d",&a[i]);
+	    qsort(a,n,sizeof(int),cmp);
+	    for(int i=0;i<n;i++)
+	    {
+	        if(k>=a[i])
+	        {
+	            k=k-a[i];
+	            c++;
+	        }
+	            else if(k>=((a[i]+1)/2))
+	            {
+	                k=k-((a[i]+1)/2);
+	                c++;
+	            }
+	    }
+	    printf("%d\n",c);
+	}
+	return 0;
+}
+
