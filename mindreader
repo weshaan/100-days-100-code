@@ -1,0 +1,77 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+char buffer[100];
+
+int main(){
+	srand(time(0));
+	int d=1;
+	while(d){
+		printf("                              ---|WELCOME TO MINDREADER|---\n");
+		printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+		int nn=11;
+		while(nn>5){
+			nn=(rand()%10);
+			if(nn==0)
+			nn=1;
+		}
+		nn*=2;
+		printf("Think of a number between 1-100.\nPress Enter to continue...\n");
+		gets(buffer);
+		printf("Now multiply that number with %d.\nPress Enter to continue...\n",nn);
+		gets(buffer);
+		int ans=31;
+		while(ans>25){
+			ans=(rand()%400)*5;
+			if(ans==0)
+			ans=10;
+		}
+		printf("Now add %d to your current number.\nPress Enter to continue...\n",nn*ans);
+		gets(buffer);
+		printf("Now divide this number with %d.\nPress Enter to continue...\n",nn);
+		gets(buffer);
+		printf("Now subtract the number you originally thought of from the number you have right now...\n");
+		gets(buffer);
+		printf("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n");
+		printf("\n");
+		printf("The number in your mind right now is : %d\n",ans);
+		printf("Agree with the answer?\n1. Enter 1 for yes\n2. Enter 2 for no\n");
+		printf("\n");
+		scanf("%d",&d);
+		system("cls");
+		switch(d){
+			case 1:
+				printf("Wanna replay?\n1. Enter 1 for yes\n2. Enter 2 for no\n");
+				scanf("%d",&d);
+				if(d>2){
+				printf("I am impressed that you were able to do maths but failed to press the correct button.");
+				d=2;	
+				}
+				d=2-d;
+				system("cls");
+				break;
+			case 2:
+				printf("Enter the number you thought of.\n");
+				int num;
+				scanf("%d",&num);
+				printf("%d * %d = %d\n",num,nn,nn*num);
+				printf("%d + %d = %d\n",num*nn,ans*nn,num*nn+ans*nn);
+				printf("%d / %d = %d\n",num*nn+ans*nn,nn,num+ans);
+				printf("%d - %d = %d\n",num+ans,num,ans);
+				printf("Wanna replay?\n1. Enter 1 for yes\n2. Enter 2 for no\n");
+				scanf("%d",&d);
+				if(d>2){
+				printf("I am impressed that you were able to do maths but failed to press the correct button.");
+				d=2;	
+				}
+				d=2-d;
+				system("cls");
+				break;
+			
+			default:
+				printf("I am impressed that you were able to do maths but failed to press the correct button.");
+				d=0;
+		}
+	}
+}
