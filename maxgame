@@ -1,0 +1,37 @@
+//https://www.codechef.com/problems/MAXGAME
+#include <stdio.h>
+
+int fac(int a){
+    int fact=1;
+    for(int b=1;b<=a;b++){
+        fact=fact*b;
+    }return fact;
+}
+
+int main(void) {
+	long long int tests;
+	scanf("%ld",&tests);
+	while(tests--){
+	    long long int n,k;
+	    scanf("%lld%lld",&n,&k);
+	    if(k==0){
+	        printf("0\n");
+	        continue;
+	    }
+	    if((n==1)||(n==0)){
+	        printf("0\n");
+	        continue;
+	    }
+	    long long int num=0;
+	    if(n<=k)
+	        k=n-1;
+	    for(long long int a=0;a<k;a++){
+	        long long int com = fac(n)/(fac(a) * fac(n-a));
+	        
+	        num=num + com;
+	    }
+	    printf("%lld\n",num);
+	}
+	return 0;
+}
+
