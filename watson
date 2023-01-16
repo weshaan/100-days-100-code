@@ -1,0 +1,28 @@
+//https://www.codechef.com/LP1TO205/problems/PERMEXIS
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int t;
+	scanf("%d", &t);
+	while(t--)
+	{
+	    int n, i, diff=0;
+	    scanf("%d", &n);
+	    int a[n];
+	    for(i=0 ; i<n ; i++)
+	        scanf("%d", &a[i]);
+	    for(i=0 ; i<n-1 ; i++)
+	    {
+	        diff = diff + abs(a[i]-a[i+1]);
+	        if(a[i] == a[i+1])
+	            diff++;
+	    }
+	    if(diff <= n-1)
+	        printf("YES\n");
+	    else
+	        printf("NO\n");
+	}
+	return 0;
+}
