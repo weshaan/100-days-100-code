@@ -1,0 +1,29 @@
+//https://www.codechef.com/LP1TO205/problems/SIGNFLIP
+#include <stdio.h>
+
+int cmpfunc (const void * a, const void * b) {
+   return ( *(int*)a - *(int*)b );
+}
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+	    int sum=0;
+	    int n,k;
+	    scanf("%d%d",&n,&k);
+	    int seq[n];
+	    for(int a=0;a<n;a++)
+	    scanf("%d",&seq[a]);
+	    qsort(seq,n,sizeof(int),cmpfunc);
+	    for(int a=0;a<k;a++)
+	        if(seq[a]<0)
+	            seq[a]=seq[a]*(-1);
+	    qsort(seq,n,sizeof(int),cmpfunc);
+	    for(int a=n-1;a>=0;a--)
+	        if(seq[a]>0)
+	            sum=sum+seq[a];
+ 	    printf("%d\n",sum);
+ 	}
+	return 0;
+}
+
