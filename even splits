@@ -1,0 +1,33 @@
+//https://www.codechef.com/LP1TO205/problems/EVENSPLIT
+#include <stdio.h>
+
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--)
+	{
+	    int n;
+	    scanf("%d",&n);
+	    char num[n];
+	    scanf("%s",&num);
+	    int count=0;
+	    for(int a=0;a<n;a++){
+	        if(num[a]=='1')
+	        count++;
+	    }
+	    if(n<=2){
+	        printf("%s",num);
+	    }
+	    else{
+	         for(int a=0;a<n;a++){
+	             if(a<n-count)
+	             printf("%c",'0');
+	             else
+	             printf("%c",'1');
+	         }
+	    }
+	    printf("\n");
+	}
+	return 0;
+}
+
