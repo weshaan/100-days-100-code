@@ -1,0 +1,18 @@
+// https://www.codechef.com/LP1TO205/problems/COOKMACH
+#include <stdio.h>
+
+int main(void) {
+		int t;
+	scanf("%d",&t);
+	while(t--){
+	    long long int a,b,c=0;
+	    scanf("%lld %lld",&a,&b);
+	    while(b%a!=0){
+	        a=a/2;
+	        c++;	    }
+	    while(a!=b){
+	        a=a*2;
+	        c++;	    }
+	    printf("%lld\n",c);	}
+	return 0;
+}
