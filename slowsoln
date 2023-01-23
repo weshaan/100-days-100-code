@@ -1,0 +1,24 @@
+//https://www.codechef.com/problems/SLOWSOLN
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        int maxt, maxn, sumn, j,k=0;
+        scanf("%d%d%d", &maxt, &maxn, &sumn);
+        j = sumn % maxn;
+        if (sumn / maxn < maxt)
+        {
+            maxt = sumn / maxn;
+            k=1;
+        }
+        if(k==1){
+        printf("%d\n", maxn * maxn * maxt + j*j);}
+        else{printf("%d\n", maxn * maxn * maxt );}
+    }
+
+    return 0;
+}
