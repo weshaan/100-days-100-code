@@ -1,0 +1,27 @@
+//https://www.codechef.com/problems/DIET
+#include <stdio.h>
+
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+	    int n,k;
+	    scanf("%d%d",&n,&k);
+	    int an[n];
+	    int sum=0;
+	    for(int a=0;a<n;a++){
+	        scanf("%d",&an[a]);}
+	    for(int a=0;a<n;a++){
+	        sum=sum+an[a];
+	        sum=sum-k;
+	        if(sum<0){
+	            printf("NO %d\n",a+1);
+	            break;}
+	            if(a==n-1){
+	                printf("YES\n");
+	            }
+	        }
+	    }
+	return 0;
+}
+
