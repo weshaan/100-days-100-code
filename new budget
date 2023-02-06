@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int cmpfunc (const void * a, const void * b) {
+   return ( *(int*)a-*(int*)b );
+}
+
+
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int bt;
+    int sum=0;
+    int refueling_costs[n];
+    int maintenance_costs[n];
+    for(int a=0;a<n;a++)
+        scanf("%d",&maintenance_costs[a]);
+    for(int a=0;a<n;a++){
+        scanf("%d",&refueling_costs[a]);
+    ;
+    }
+       qsort(refueling_costs, n, sizeof(int), cmpfunc);
+       qsort(maintenance_costs, n, sizeof(int), cmpfunc);
+    scanf("%d",&bt);
+    int no=0;
+    for(int a=0;a<n;a++){
+        sum=sum+maintenance_costs[a];
+        int tt=refueling_costs[0]+(a+1)*sum;
+        bt=bt-tt;
+        no=a+1;
+        if(bt<=0)
+            break;
+    }
+    printf("%d",no);
+    return 0;
+}
