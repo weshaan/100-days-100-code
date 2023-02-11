@@ -1,0 +1,27 @@
+//https://www.codechef.com/problems/CANDY123
+#include <stdio.h>
+
+int main(void) {
+	int tests;
+	scanf("%d",&tests);
+	while(tests--){
+	    int l,b;
+	    scanf("%d%d",&l,&b);
+	    for(int a=0;;a++){
+	    if(a%2!=0)
+	    l=l-a;
+	    else
+	    b=b-a;
+	    if(l<0){
+	        printf("Bob\n");
+	        break;
+	    }
+	    if(b<0){
+	        printf("Limak\n");
+	        break;
+	    }
+	}
+	}
+	return 0;
+}
+
