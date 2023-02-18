@@ -1,0 +1,39 @@
+//https://www.codechef.com/problems/AIRLINE
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	    int a,b,c,d,e,ab[3];
+	    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+	    int arr[] = {a,b,c};
+	    for(int i=0;i<3;i++){
+	        for(int j=i+1;j<3;j++){
+	            if(arr[i]>arr[j]){
+	                int temp;
+	                temp = arr[i];
+	                arr[i]=arr[j];
+	                arr[j] = temp;
+	            }
+	        }
+	        ab[i] = arr[i];
+	    }
+	    if(ab[2]<=e && (ab[0]+ab[1])<=d){
+	        printf("YES\n");
+	    }
+	     else if(ab[1]<=e && (ab[0]+ab[2])<=d){
+	        printf("YES\n");
+	    }
+	     else  if(ab[0]<=e && (ab[2]+ab[1])<=d){
+	        printf("YES\n");
+	    }
+	    else{
+	        printf("NO\n");
+	    }
+	      
+	}
+	return 0;
+}
+
