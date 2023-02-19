@@ -1,0 +1,25 @@
+//https://www.codechef.com/problems/ODDPAIRS
+#include <iostream>
+using namespace std;
+
+int main() {
+	int tests;
+	cin >> tests;
+	while(tests--){
+	    long int no_odd;
+	    long int no_even;
+	    long int n;
+	    scanf("%d",&n);
+	    if(n%2==0){
+	        no_odd=n/2;
+	        no_even=n/2;
+	    }else{
+	        no_odd=(n+1)/2;
+	        no_even=(n-1)/2;
+	    }
+	    int ans;
+	    ans=2*(no_odd*no_even);
+	    cout << ans << endl;
+	}
+	return 0;
+}
