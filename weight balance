@@ -1,0 +1,23 @@
+//https://www.codechef.com/problems/WEIGHTBL
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,w1,w2,x1,x2,m;
+	int a,b,c;
+	cin>>t;
+	while(t--){
+	    cin>>w1>>w2>>x1>>x2>>m;
+	    a = m*x1;
+	    b = m*x2;
+	    c = w2 - w1;
+	    if(c>=a && c<= b){
+	        cout<<1<<endl;
+	    }else{
+	        cout<<0<<endl;
+	    }
+	}
+	return 0;
+}
+
