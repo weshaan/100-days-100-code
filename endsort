@@ -1,0 +1,39 @@
+//https://www.codechef.com/problems/ENDSORTED
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n;
+	    cin>>n;
+	    int arr[n];
+	    int in1,inn;
+	    for(int i=0;i<n;i++)
+	    {
+	        cin>>arr[i];
+	        if(arr[i]==1)
+	        {
+	            in1=i;
+	        }
+	        if(arr[i]==n)
+	        {
+	            inn=i;
+	        }
+	    }
+	    if(in1==0 && inn==n-1)
+	    {
+	        cout<<0<<endl;
+	    }
+	    else if(in1<inn)
+	    {
+	        cout<<(n-1)-inn+(in1-0)<<endl;
+	    }
+	    else
+	    {
+	        cout<<((n-1)-inn+(in1-0))-1<<endl;
+	    }
+	}
+	return 0;
+}
