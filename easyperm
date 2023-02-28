@@ -1,0 +1,14 @@
+//https://www.codechef.com/problems/EASYPERM
+#include <iostream>
+using namespace std;
+
+int main() {
+	int tests;
+  cin >> tests;
+  while(tests--) {
+  int n;
+  cin >> n;
+  for(int a=n;a>=1;a--)
+    cout << a << ' ';;
+    }cout << endl;
+}
