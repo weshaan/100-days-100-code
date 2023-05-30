@@ -6,4 +6,4 @@ Started on- 23rd november, 2022
 **/</br>
 
 
-Interesting coincidence, the 100th day(today) also happens to be my brithday lol
+Interesting coincidence, the 100th day(today) also happens to be my birthday lol
